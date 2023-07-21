@@ -7,15 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		012661BE49A17C6C15F6AEEB /* Pods_HearthstoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDCCD7813C345BA116C6710 /* Pods_HearthstoneTests.framework */; };
 		1483958E2A664F20007B3704 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483958D2A664F20007B3704 /* AppDelegate.swift */; };
 		148395902A664F20007B3704 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483958F2A664F20007B3704 /* SceneDelegate.swift */; };
-		148395922A664F20007B3704 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395912A664F20007B3704 /* ViewController.swift */; };
-		148395952A664F20007B3704 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148395932A664F20007B3704 /* Main.storyboard */; };
 		148395972A664F24007B3704 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148395962A664F24007B3704 /* Assets.xcassets */; };
 		1483959A2A664F24007B3704 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148395982A664F24007B3704 /* LaunchScreen.storyboard */; };
 		148395A52A664F24007B3704 /* HearthstoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395A42A664F24007B3704 /* HearthstoneTests.swift */; };
 		148395AF2A664F24007B3704 /* HearthstoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395AE2A664F24007B3704 /* HearthstoneUITests.swift */; };
 		148395B12A664F24007B3704 /* HearthstoneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395B02A664F24007B3704 /* HearthstoneUITestsLaunchTests.swift */; };
+		148395D22A6654B2007B3704 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395CC2A6654B2007B3704 /* HomePresenter.swift */; };
+		148395D32A6654B2007B3704 /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395CD2A6654B2007B3704 /* HomeWorker.swift */; };
+		148395D42A6654B2007B3704 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395CE2A6654B2007B3704 /* HomeRouter.swift */; };
+		148395D52A6654B2007B3704 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395CF2A6654B2007B3704 /* HomeModels.swift */; };
+		148395D62A6654B2007B3704 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395D02A6654B2007B3704 /* HomeViewController.swift */; };
+		148395D72A6654B2007B3704 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395D12A6654B2007B3704 /* HomeInteractor.swift */; };
+		148395E02A6654DD007B3704 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395DA2A6654DD007B3704 /* DetailsPresenter.swift */; };
+		148395E12A6654DD007B3704 /* DetailsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395DB2A6654DD007B3704 /* DetailsWorker.swift */; };
+		148395E22A6654DD007B3704 /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395DC2A6654DD007B3704 /* DetailsRouter.swift */; };
+		148395E32A6654DD007B3704 /* DetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395DD2A6654DD007B3704 /* DetailsModels.swift */; };
+		148395E42A6654DD007B3704 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395DE2A6654DD007B3704 /* DetailsViewController.swift */; };
+		148395E52A6654DD007B3704 /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395DF2A6654DD007B3704 /* DetailsInteractor.swift */; };
+		148395E82A665834007B3704 /* NetworkProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395E72A665834007B3704 /* NetworkProviderProtocol.swift */; };
+		148395EA2A66590A007B3704 /* AllCardsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395E92A66590A007B3704 /* AllCardsEndpoint.swift */; };
+		148395EC2A665A01007B3704 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395EB2A665A01007B3704 /* NetworkError.swift */; };
+		148395EE2A665A25007B3704 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395ED2A665A25007B3704 /* NetworkProvider.swift */; };
+		1E2B07936568493899D63C62 /* Pods_Hearthstone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E19B065E4F4855DDDCB07CE /* Pods_Hearthstone.framework */; };
+		C830E42A05999F2E1342E8C1 /* Pods_Hearthstone_HearthstoneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7FC1A26FF12663BE752D10 /* Pods_Hearthstone_HearthstoneUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +53,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		059738D96F218390AD996A0C /* Pods-Hearthstone-HearthstoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hearthstone-HearthstoneUITests.release.xcconfig"; path = "Target Support Files/Pods-Hearthstone-HearthstoneUITests/Pods-Hearthstone-HearthstoneUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0BB265AFBA70FAC63148275B /* Pods-Hearthstone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hearthstone.debug.xcconfig"; path = "Target Support Files/Pods-Hearthstone/Pods-Hearthstone.debug.xcconfig"; sourceTree = "<group>"; };
 		1483958A2A664F20007B3704 /* Hearthstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hearthstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1483958D2A664F20007B3704 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1483958F2A664F20007B3704 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		148395912A664F20007B3704 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		148395942A664F20007B3704 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		148395962A664F24007B3704 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		148395992A664F24007B3704 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1483959B2A664F24007B3704 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +66,29 @@
 		148395AA2A664F24007B3704 /* HearthstoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HearthstoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		148395AE2A664F24007B3704 /* HearthstoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearthstoneUITests.swift; sourceTree = "<group>"; };
 		148395B02A664F24007B3704 /* HearthstoneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearthstoneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		148395CC2A6654B2007B3704 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		148395CD2A6654B2007B3704 /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
+		148395CE2A6654B2007B3704 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		148395CF2A6654B2007B3704 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
+		148395D02A6654B2007B3704 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		148395D12A6654B2007B3704 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		148395DA2A6654DD007B3704 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		148395DB2A6654DD007B3704 /* DetailsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsWorker.swift; sourceTree = "<group>"; };
+		148395DC2A6654DD007B3704 /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
+		148395DD2A6654DD007B3704 /* DetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsModels.swift; sourceTree = "<group>"; };
+		148395DE2A6654DD007B3704 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		148395DF2A6654DD007B3704 /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
+		148395E72A665834007B3704 /* NetworkProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderProtocol.swift; sourceTree = "<group>"; };
+		148395E92A66590A007B3704 /* AllCardsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCardsEndpoint.swift; sourceTree = "<group>"; };
+		148395EB2A665A01007B3704 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		148395ED2A665A25007B3704 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		35944560623E930235B00E9B /* Pods-Hearthstone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hearthstone.release.xcconfig"; path = "Target Support Files/Pods-Hearthstone/Pods-Hearthstone.release.xcconfig"; sourceTree = "<group>"; };
+		3FB3ED9535A805F8AA636C46 /* Pods-Hearthstone-HearthstoneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hearthstone-HearthstoneUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hearthstone-HearthstoneUITests/Pods-Hearthstone-HearthstoneUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5A90C0B50EF2E80699581690 /* Pods-HearthstoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HearthstoneTests.debug.xcconfig"; path = "Target Support Files/Pods-HearthstoneTests/Pods-HearthstoneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6E19B065E4F4855DDDCB07CE /* Pods_Hearthstone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hearthstone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B7FC1A26FF12663BE752D10 /* Pods_Hearthstone_HearthstoneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hearthstone_HearthstoneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C7368D4A07FB1A617B2DF56 /* Pods-HearthstoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HearthstoneTests.release.xcconfig"; path = "Target Support Files/Pods-HearthstoneTests/Pods-HearthstoneTests.release.xcconfig"; sourceTree = "<group>"; };
+		CBDCCD7813C345BA116C6710 /* Pods_HearthstoneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HearthstoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E2B07936568493899D63C62 /* Pods_Hearthstone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				012661BE49A17C6C15F6AEEB /* Pods_HearthstoneTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C830E42A05999F2E1342E8C1 /* Pods_Hearthstone_HearthstoneUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +126,8 @@
 				148395A32A664F24007B3704 /* HearthstoneTests */,
 				148395AD2A664F24007B3704 /* HearthstoneUITests */,
 				1483958B2A664F20007B3704 /* Products */,
+				38387A11C97C72E6F4ECC20B /* Pods */,
+				B0576B408F9086FE26FFB75F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +144,10 @@
 		1483958C2A664F20007B3704 /* Hearthstone */ = {
 			isa = PBXGroup;
 			children = (
-				1483958D2A664F20007B3704 /* AppDelegate.swift */,
-				1483958F2A664F20007B3704 /* SceneDelegate.swift */,
-				148395912A664F20007B3704 /* ViewController.swift */,
-				148395932A664F20007B3704 /* Main.storyboard */,
-				148395962A664F24007B3704 /* Assets.xcassets */,
-				148395982A664F24007B3704 /* LaunchScreen.storyboard */,
-				1483959B2A664F24007B3704 /* Info.plist */,
+				148395CB2A664F8E007B3704 /* Application */,
+				148395E62A66581C007B3704 /* Networking */,
+				148395CA2A664F80007B3704 /* Resources */,
+				148395C92A664F5F007B3704 /* Scenes */,
 			);
 			path = Hearthstone;
 			sourceTree = "<group>";
@@ -127,6 +169,94 @@
 			path = HearthstoneUITests;
 			sourceTree = "<group>";
 		};
+		148395C92A664F5F007B3704 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				148395D82A6654BA007B3704 /* Home */,
+				148395D92A6654C7007B3704 /* Details */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		148395CA2A664F80007B3704 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				148395962A664F24007B3704 /* Assets.xcassets */,
+				148395982A664F24007B3704 /* LaunchScreen.storyboard */,
+				1483959B2A664F24007B3704 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		148395CB2A664F8E007B3704 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1483958D2A664F20007B3704 /* AppDelegate.swift */,
+				1483958F2A664F20007B3704 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		148395D82A6654BA007B3704 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				148395CC2A6654B2007B3704 /* HomePresenter.swift */,
+				148395CD2A6654B2007B3704 /* HomeWorker.swift */,
+				148395CE2A6654B2007B3704 /* HomeRouter.swift */,
+				148395CF2A6654B2007B3704 /* HomeModels.swift */,
+				148395D02A6654B2007B3704 /* HomeViewController.swift */,
+				148395D12A6654B2007B3704 /* HomeInteractor.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		148395D92A6654C7007B3704 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				148395DA2A6654DD007B3704 /* DetailsPresenter.swift */,
+				148395DB2A6654DD007B3704 /* DetailsWorker.swift */,
+				148395DC2A6654DD007B3704 /* DetailsRouter.swift */,
+				148395DD2A6654DD007B3704 /* DetailsModels.swift */,
+				148395DE2A6654DD007B3704 /* DetailsViewController.swift */,
+				148395DF2A6654DD007B3704 /* DetailsInteractor.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		148395E62A66581C007B3704 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				148395E92A66590A007B3704 /* AllCardsEndpoint.swift */,
+				148395E72A665834007B3704 /* NetworkProviderProtocol.swift */,
+				148395EB2A665A01007B3704 /* NetworkError.swift */,
+				148395ED2A665A25007B3704 /* NetworkProvider.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		38387A11C97C72E6F4ECC20B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BB265AFBA70FAC63148275B /* Pods-Hearthstone.debug.xcconfig */,
+				35944560623E930235B00E9B /* Pods-Hearthstone.release.xcconfig */,
+				3FB3ED9535A805F8AA636C46 /* Pods-Hearthstone-HearthstoneUITests.debug.xcconfig */,
+				059738D96F218390AD996A0C /* Pods-Hearthstone-HearthstoneUITests.release.xcconfig */,
+				5A90C0B50EF2E80699581690 /* Pods-HearthstoneTests.debug.xcconfig */,
+				8C7368D4A07FB1A617B2DF56 /* Pods-HearthstoneTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B0576B408F9086FE26FFB75F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E19B065E4F4855DDDCB07CE /* Pods_Hearthstone.framework */,
+				7B7FC1A26FF12663BE752D10 /* Pods_Hearthstone_HearthstoneUITests.framework */,
+				CBDCCD7813C345BA116C6710 /* Pods_HearthstoneTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +264,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 148395B42A664F24007B3704 /* Build configuration list for PBXNativeTarget "Hearthstone" */;
 			buildPhases = (
+				759A00B6BEBB8310689F02E7 /* [CP] Check Pods Manifest.lock */,
 				148395862A664F20007B3704 /* Sources */,
 				148395872A664F20007B3704 /* Frameworks */,
 				148395882A664F20007B3704 /* Resources */,
+				12DF84035392A3AEEA71AB92 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,9 +283,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 148395B72A664F24007B3704 /* Build configuration list for PBXNativeTarget "HearthstoneTests" */;
 			buildPhases = (
+				EC73CF4305C780F000A20CF7 /* [CP] Check Pods Manifest.lock */,
 				1483959C2A664F24007B3704 /* Sources */,
 				1483959D2A664F24007B3704 /* Frameworks */,
 				1483959E2A664F24007B3704 /* Resources */,
+				80D04D41BDB7BBEF956E55EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,9 +303,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 148395BA2A664F24007B3704 /* Build configuration list for PBXNativeTarget "HearthstoneUITests" */;
 			buildPhases = (
+				F3D193533F100DC353F4C27F /* [CP] Check Pods Manifest.lock */,
 				148395A62A664F24007B3704 /* Sources */,
 				148395A72A664F24007B3704 /* Frameworks */,
 				148395A82A664F24007B3704 /* Resources */,
+				C1D27F32538E04D61E24B02D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,7 +369,6 @@
 			files = (
 				1483959A2A664F24007B3704 /* LaunchScreen.storyboard in Resources */,
 				148395972A664F24007B3704 /* Assets.xcassets in Resources */,
-				148395952A664F20007B3704 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +388,149 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12DF84035392A3AEEA71AB92 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hearthstone/Pods-Hearthstone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hearthstone/Pods-Hearthstone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hearthstone/Pods-Hearthstone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		759A00B6BEBB8310689F02E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hearthstone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80D04D41BDB7BBEF956E55EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HearthstoneTests/Pods-HearthstoneTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HearthstoneTests/Pods-HearthstoneTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HearthstoneTests/Pods-HearthstoneTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1D27F32538E04D61E24B02D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hearthstone-HearthstoneUITests/Pods-Hearthstone-HearthstoneUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hearthstone-HearthstoneUITests/Pods-Hearthstone-HearthstoneUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hearthstone-HearthstoneUITests/Pods-Hearthstone-HearthstoneUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC73CF4305C780F000A20CF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HearthstoneTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3D193533F100DC353F4C27F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hearthstone-HearthstoneUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		148395862A664F20007B3704 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				148395922A664F20007B3704 /* ViewController.swift in Sources */,
+				148395EC2A665A01007B3704 /* NetworkError.swift in Sources */,
+				148395E32A6654DD007B3704 /* DetailsModels.swift in Sources */,
+				148395E52A6654DD007B3704 /* DetailsInteractor.swift in Sources */,
+				148395E82A665834007B3704 /* NetworkProviderProtocol.swift in Sources */,
+				148395E22A6654DD007B3704 /* DetailsRouter.swift in Sources */,
+				148395D22A6654B2007B3704 /* HomePresenter.swift in Sources */,
 				1483958E2A664F20007B3704 /* AppDelegate.swift in Sources */,
+				148395D32A6654B2007B3704 /* HomeWorker.swift in Sources */,
+				148395D72A6654B2007B3704 /* HomeInteractor.swift in Sources */,
+				148395EA2A66590A007B3704 /* AllCardsEndpoint.swift in Sources */,
+				148395E12A6654DD007B3704 /* DetailsWorker.swift in Sources */,
+				148395EE2A665A25007B3704 /* NetworkProvider.swift in Sources */,
 				148395902A664F20007B3704 /* SceneDelegate.swift in Sources */,
+				148395D52A6654B2007B3704 /* HomeModels.swift in Sources */,
+				148395D62A6654B2007B3704 /* HomeViewController.swift in Sources */,
+				148395D42A6654B2007B3704 /* HomeRouter.swift in Sources */,
+				148395E42A6654DD007B3704 /* DetailsViewController.swift in Sources */,
+				148395E02A6654DD007B3704 /* DetailsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +567,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		148395932A664F20007B3704 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				148395942A664F20007B3704 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		148395982A664F24007B3704 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -432,6 +694,7 @@
 		};
 		148395B52A664F24007B3704 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BB265AFBA70FAC63148275B /* Pods-Hearthstone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -442,7 +705,6 @@
 				INFOPLIST_FILE = Hearthstone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -460,6 +722,7 @@
 		};
 		148395B62A664F24007B3704 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35944560623E930235B00E9B /* Pods-Hearthstone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -470,7 +733,6 @@
 				INFOPLIST_FILE = Hearthstone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -488,6 +750,7 @@
 		};
 		148395B82A664F24007B3704 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A90C0B50EF2E80699581690 /* Pods-HearthstoneTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +771,7 @@
 		};
 		148395B92A664F24007B3704 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C7368D4A07FB1A617B2DF56 /* Pods-HearthstoneTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,6 +792,7 @@
 		};
 		148395BB2A664F24007B3704 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FB3ED9535A805F8AA636C46 /* Pods-Hearthstone-HearthstoneUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -546,6 +811,7 @@
 		};
 		148395BC2A664F24007B3704 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 059738D96F218390AD996A0C /* Pods-Hearthstone-HearthstoneUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
