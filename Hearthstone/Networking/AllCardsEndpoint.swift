@@ -13,29 +13,29 @@ struct AllCardsEndpoint {
 
     var url: URL? {
         var urlComponents = URLComponents()
-        urlComponents.scheme = "https"
-        urlComponents.host = "omgvamp-hearthstone-v1.p.rapidapi.com"
+        urlComponents.scheme = Bundle.main.scheme
+        urlComponents.host = Bundle.main.host
         urlComponents.path = path
         return urlComponents.url
     }
     
     var headerKeyField: String {
-        "X-RapidAPI-Key"
+        Bundle.main.headerKeyField
     }
 
     var headerValue: String {
-        "5c41435c63msh183d9e3129768a4p12e19ejsnd3dce1dcf0c9"
+        Bundle.main.apiKey
     }
 
     var headerHostField: String {
-        "X-RapidAPI-Host"
+        Bundle.main.headerHostField
     }
 
     var headerHostValue: String {
-        "omgvamp-hearthstone-v1.p.rapidapi.com"
+        Bundle.main.host
     }
 
     static func fetchCards() -> Self {
-        Self(path: "/cards", method: "GET")
+        Self(path: Bundle.main.endpoint, method: "GET")
     }
 }

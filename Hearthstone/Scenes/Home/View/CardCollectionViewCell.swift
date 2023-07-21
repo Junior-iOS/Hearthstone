@@ -30,10 +30,10 @@ class CardCollectionViewCell: UICollectionViewCell {
         nil
     }
     
-//    override func prepareForReuse() {
-//        super.prepareForReuse()
-//        cardImage.image = nil
-//    }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        cardImage.image = UIImage(named: "card")
+    }
 
     private func setupCell() {
         contentView.addSubview(cardImage)
@@ -47,7 +47,9 @@ class CardCollectionViewCell: UICollectionViewCell {
     }
     
     public func configure(with card: Card) {
-        guard let img = card.img, let url = URL(string: img) else { return }
+        guard let img = card.img,
+              let url = URL(string: img) else { return }
+        
         DispatchQueue.main.async {
             self.cardImage.sd_setImage(with: url)
         }
