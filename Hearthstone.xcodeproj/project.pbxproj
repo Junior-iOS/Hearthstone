@@ -32,6 +32,8 @@
 		148395EC2A665A01007B3704 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395EB2A665A01007B3704 /* NetworkError.swift */; };
 		148395EE2A665A25007B3704 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395ED2A665A25007B3704 /* NetworkProvider.swift */; };
 		148395F42A6A3046007B3704 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395F32A6A3046007B3704 /* UIView+Extensions.swift */; };
+		148395F62A6A3B45007B3704 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395F52A6A3B45007B3704 /* Bundle+Extensions.swift */; };
+		148395F92A6A508D007B3704 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395F82A6A508D007B3704 /* CardCollectionViewCell.swift */; };
 		1E2B07936568493899D63C62 /* Pods_Hearthstone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E19B065E4F4855DDDCB07CE /* Pods_Hearthstone.framework */; };
 		C830E42A05999F2E1342E8C1 /* Pods_Hearthstone_HearthstoneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7FC1A26FF12663BE752D10 /* Pods_Hearthstone_HearthstoneUITests.framework */; };
 /* End PBXBuildFile section */
@@ -84,6 +86,8 @@
 		148395EB2A665A01007B3704 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		148395ED2A665A25007B3704 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		148395F32A6A3046007B3704 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		148395F52A6A3B45007B3704 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		148395F82A6A508D007B3704 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		35944560623E930235B00E9B /* Pods-Hearthstone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hearthstone.release.xcconfig"; path = "Target Support Files/Pods-Hearthstone/Pods-Hearthstone.release.xcconfig"; sourceTree = "<group>"; };
 		3FB3ED9535A805F8AA636C46 /* Pods-Hearthstone-HearthstoneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hearthstone-HearthstoneUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hearthstone-HearthstoneUITests/Pods-Hearthstone-HearthstoneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A90C0B50EF2E80699581690 /* Pods-HearthstoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HearthstoneTests.debug.xcconfig"; path = "Target Support Files/Pods-HearthstoneTests/Pods-HearthstoneTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 		148395D82A6654BA007B3704 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				148395F72A6A504B007B3704 /* View */,
 				148395CC2A6654B2007B3704 /* HomePresenter.swift */,
 				148395CD2A6654B2007B3704 /* HomeWorker.swift */,
 				148395CE2A6654B2007B3704 /* HomeRouter.swift */,
@@ -222,7 +227,6 @@
 				148395DD2A6654DD007B3704 /* DetailsModels.swift */,
 				148395DE2A6654DD007B3704 /* DetailsViewController.swift */,
 				148395DF2A6654DD007B3704 /* DetailsInteractor.swift */,
-				148395F32A6A3046007B3704 /* UIView+Extensions.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -241,8 +245,18 @@
 		148395F22A6A301A007B3704 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				148395F32A6A3046007B3704 /* UIView+Extensions.swift */,
+				148395F52A6A3B45007B3704 /* Bundle+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		148395F72A6A504B007B3704 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				148395F82A6A508D007B3704 /* CardCollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		38387A11C97C72E6F4ECC20B /* Pods */ = {
@@ -528,6 +542,7 @@
 				148395E32A6654DD007B3704 /* DetailsModels.swift in Sources */,
 				148395E52A6654DD007B3704 /* DetailsInteractor.swift in Sources */,
 				148395E82A665834007B3704 /* NetworkProviderProtocol.swift in Sources */,
+				148395F92A6A508D007B3704 /* CardCollectionViewCell.swift in Sources */,
 				148395E22A6654DD007B3704 /* DetailsRouter.swift in Sources */,
 				148395D22A6654B2007B3704 /* HomePresenter.swift in Sources */,
 				1483958E2A664F20007B3704 /* AppDelegate.swift in Sources */,
@@ -535,6 +550,7 @@
 				148395D72A6654B2007B3704 /* HomeInteractor.swift in Sources */,
 				148395EA2A66590A007B3704 /* AllCardsEndpoint.swift in Sources */,
 				148395E12A6654DD007B3704 /* DetailsWorker.swift in Sources */,
+				148395F62A6A3B45007B3704 /* Bundle+Extensions.swift in Sources */,
 				148395EE2A665A25007B3704 /* NetworkProvider.swift in Sources */,
 				148395F42A6A3046007B3704 /* UIView+Extensions.swift in Sources */,
 				148395902A664F20007B3704 /* SceneDelegate.swift in Sources */,
@@ -708,12 +724,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0BB265AFBA70FAC63148275B /* Pods-Hearthstone.debug.xcconfig */;
 			buildSettings = {
+				API_KEY = 5c41435c63msh183d9e3129768a4p12e19ejsnd3dce1dcf0c9;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KTUAP2Z2QF;
+				ENDPOINT = /cards;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_HOST_FIELD = "X-RapidAPI-Host";
+				HEADER_KEY_FIELD = "X-RapidAPI-Key";
+				HOST = "omgvamp-hearthstone-v1.p.rapidapi.com";
 				INFOPLIST_FILE = Hearthstone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -726,9 +747,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.njdevelopment.Hearthstone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCHEME = https;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TITLE = "Hall of Fame";
 			};
 			name = Debug;
 		};
@@ -736,12 +759,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 35944560623E930235B00E9B /* Pods-Hearthstone.release.xcconfig */;
 			buildSettings = {
+				API_KEY = 5c41435c63msh183d9e3129768a4p12e19ejsnd3dce1dcf0c9;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KTUAP2Z2QF;
+				ENDPOINT = /cards;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_HOST_FIELD = "X-RapidAPI-Host";
+				HEADER_KEY_FIELD = "X-RapidAPI-Key";
+				HOST = "omgvamp-hearthstone-v1.p.rapidapi.com";
 				INFOPLIST_FILE = Hearthstone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -754,9 +782,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.njdevelopment.Hearthstone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCHEME = https;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TITLE = "Hall of Fame";
 			};
 			name = Release;
 		};

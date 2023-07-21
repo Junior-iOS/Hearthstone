@@ -14,14 +14,16 @@ final class NetworkProvider: NetworkProviderProtocol {
             return
         }
         
-        let headers = [
-            endpoint.headerKeyField: endpoint.headerValue,
-            endpoint.headerHostField: endpoint.headerHostValue
-        ]
+//        let headers = [
+//            endpoint.headerKeyField: endpoint.headerValue,
+//            endpoint.headerHostField: endpoint.headerHostValue
+//        ]
 
         var request = URLRequest(url: url)
         request.httpMethod = endpoint.method
-        request.allHTTPHeaderFields = headers
+//        request.allHTTPHeaderFields = headers
+        request.setValue(endpoint.headerValue, forHTTPHeaderField: endpoint.headerKeyField)
+        request.setValue(endpoint.headerHostValue, forHTTPHeaderField: endpoint.headerHostField)
 
         loadUrlAndDecode(request, completion: completion)
     }

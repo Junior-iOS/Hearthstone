@@ -11,7 +11,7 @@ import UIKit
 protocol HomeBusinessLogic {
     func fetchCards()
     func numberOfRows(for section: Int) -> Int
-    func cellForRow(for section: Int) -> [Card]?
+    func cellForRow(at index: Int) -> Card?
     func didSelectRowAt(indexPath: IndexPath)
     
     var navTitle: String { get }
@@ -47,8 +47,8 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
         cards?.count ?? 0
     }
     
-    func cellForRow(for section: Int) -> [Card]? {
-        return cards
+    func cellForRow(at index: Int) -> Card? {
+        return cards?[index]
     }
     
     func didSelectRowAt(indexPath: IndexPath) {

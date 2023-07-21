@@ -60,7 +60,7 @@ class HomeViewController: UICollectionViewController {
     }
     
     private func setupView() {
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: UICollectionViewCell.identifier)
+        collectionView.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: CardCollectionViewCell.identifier)
         navigationItem.title = "Hall of Fame"
         
         view.backgroundColor = .systemBackground
@@ -90,8 +90,8 @@ class HomeViewController: UICollectionViewController {
     
     private static func createLayout() -> UICollectionViewCompositionalLayout {
         return UICollectionViewCompositionalLayout { (sectionNumber, env) -> NSCollectionLayoutSection? in
-            let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(0.25),
-                                                                heightDimension: .absolute(140)))
+            let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(0.33),
+                                                                heightDimension: .absolute(170)))
             item.contentInsets.trailing = 16
             item.contentInsets.bottom = 16
             
@@ -133,8 +133,14 @@ extension HomeViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UICollectionViewCell.identifier, for: indexPath)
-        cell.backgroundColor = .systemRed
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: CardCollectionViewCell.identifier,
+            for: indexPath) as? CardCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        
+        guard let card = interactor?.cellForRow(at: indexPath.row) else { return UICollectionViewCell() }
+        cell.configure(with: card)
         
         return cell
     }

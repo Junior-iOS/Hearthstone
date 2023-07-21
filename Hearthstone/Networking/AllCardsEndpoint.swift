@@ -39,4 +39,3 @@ struct AllCardsEndpoint {
         Self(path: "/cards", method: "GET")
     }
 }
-

@@ -13,16 +13,16 @@ protocol DetailsBusinessLogic {
 }
 
 protocol DetailsDataStore {
-    var cards: [Card]? { get set }
+    var selectedCard: Card? { get set }
 }
 
 class DetailsInteractor: DetailsBusinessLogic, DetailsDataStore {
     
     var presenter: DetailsPresentationLogic?
     var worker: DetailsWorker?
-    var cards: [Card]?
+    var selectedCard: Card?
 
     func showSelectedCard() {
-        cards?.forEach({ print($0) })
+        
     }
 }
