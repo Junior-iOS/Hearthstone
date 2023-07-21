@@ -11,6 +11,7 @@ import UIKit
 protocol HomePresentationLogic {
     func presentCards()
     func reloadData()
+    func hideSpinner()
 }
 
 class HomePresenter: HomePresentationLogic {
@@ -22,5 +23,9 @@ class HomePresenter: HomePresentationLogic {
     
     func reloadData() {
         viewController?.reloadData()
+    }
+    
+    func hideSpinner() {
+        viewController?.hideSpinner()
     }
 }

@@ -31,6 +31,7 @@
 		148395EA2A66590A007B3704 /* AllCardsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395E92A66590A007B3704 /* AllCardsEndpoint.swift */; };
 		148395EC2A665A01007B3704 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395EB2A665A01007B3704 /* NetworkError.swift */; };
 		148395EE2A665A25007B3704 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395ED2A665A25007B3704 /* NetworkProvider.swift */; };
+		148395F42A6A3046007B3704 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395F32A6A3046007B3704 /* UIView+Extensions.swift */; };
 		1E2B07936568493899D63C62 /* Pods_Hearthstone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E19B065E4F4855DDDCB07CE /* Pods_Hearthstone.framework */; };
 		C830E42A05999F2E1342E8C1 /* Pods_Hearthstone_HearthstoneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7FC1A26FF12663BE752D10 /* Pods_Hearthstone_HearthstoneUITests.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,7 @@
 		148395E92A66590A007B3704 /* AllCardsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCardsEndpoint.swift; sourceTree = "<group>"; };
 		148395EB2A665A01007B3704 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		148395ED2A665A25007B3704 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		148395F32A6A3046007B3704 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		35944560623E930235B00E9B /* Pods-Hearthstone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hearthstone.release.xcconfig"; path = "Target Support Files/Pods-Hearthstone/Pods-Hearthstone.release.xcconfig"; sourceTree = "<group>"; };
 		3FB3ED9535A805F8AA636C46 /* Pods-Hearthstone-HearthstoneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hearthstone-HearthstoneUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hearthstone-HearthstoneUITests/Pods-Hearthstone-HearthstoneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A90C0B50EF2E80699581690 /* Pods-HearthstoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HearthstoneTests.debug.xcconfig"; path = "Target Support Files/Pods-HearthstoneTests/Pods-HearthstoneTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				148395E62A66581C007B3704 /* Networking */,
 				148395CA2A664F80007B3704 /* Resources */,
 				148395C92A664F5F007B3704 /* Scenes */,
+				148395F22A6A301A007B3704 /* Extensions */,
 			);
 			path = Hearthstone;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				148395DD2A6654DD007B3704 /* DetailsModels.swift */,
 				148395DE2A6654DD007B3704 /* DetailsViewController.swift */,
 				148395DF2A6654DD007B3704 /* DetailsInteractor.swift */,
+				148395F32A6A3046007B3704 /* UIView+Extensions.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -232,6 +236,13 @@
 				148395ED2A665A25007B3704 /* NetworkProvider.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		148395F22A6A301A007B3704 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		38387A11C97C72E6F4ECC20B /* Pods */ = {
@@ -525,6 +536,7 @@
 				148395EA2A66590A007B3704 /* AllCardsEndpoint.swift in Sources */,
 				148395E12A6654DD007B3704 /* DetailsWorker.swift in Sources */,
 				148395EE2A665A25007B3704 /* NetworkProvider.swift in Sources */,
+				148395F42A6A3046007B3704 /* UIView+Extensions.swift in Sources */,
 				148395902A664F20007B3704 /* SceneDelegate.swift in Sources */,
 				148395D52A6654B2007B3704 /* HomeModels.swift in Sources */,
 				148395D62A6654B2007B3704 /* HomeViewController.swift in Sources */,

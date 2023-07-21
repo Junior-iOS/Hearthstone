@@ -11,9 +11,18 @@ import UIKit
 protocol HomeDisplayLogic: AnyObject {
     func displayCards()
     func reloadData()
+    func hideSpinner()
 }
 
 class HomeViewController: UICollectionViewController {
+    private lazy var spinner: UIActivityIndicatorView = {
+        let spinner = UIActivityIndicatorView(style: .large)
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        spinner.startAnimating()
+        spinner.hidesWhenStopped = true
+        return spinner
+    }()
+    
     // MARK: Clean Swift
     var interactor: HomeBusinessLogic?
     var router: (NSObjectProtocol & HomeRoutingLogic & HomeDataPassing)?
@@ -22,12 +31,12 @@ class HomeViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: UICollectionViewCell.identifier)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         interactor?.fetchCards()
+        setupView()
     }
     
     init() {
@@ -37,6 +46,35 @@ class HomeViewController: UICollectionViewController {
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         nil
+    }
+    
+    private func setupView() {
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: UICollectionViewCell.identifier)
+        title = interactor?.navTitle // Alterar para Bundle
+        
+        view.backgroundColor = .systemBackground
+
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationItem.largeTitleDisplayMode = .always
+
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        
+        addComponents()
+    }
+
+    // MARK: Setup
+    private func setup() {
+        let viewController = self
+        let interactor = HomeInteractor()
+        let presenter = HomePresenter()
+        let router = HomeRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
     }
     
     private static func createLayout() -> UICollectionViewCompositionalLayout {
@@ -58,22 +96,18 @@ class HomeViewController: UICollectionViewController {
             return section
         }
     }
-
-    // MARK: Setup
-
-    private func setup() {
-        let viewController = self
-        let interactor = HomeInteractor()
-        let presenter = HomePresenter()
-        let router = HomeRouter()
-        viewController.interactor = interactor
-        viewController.router = router
-        interactor.presenter = presenter
-        presenter.viewController = viewController
-        router.viewController = viewController
-        router.dataStore = interactor
-    }
     
+    private func addComponents() {
+        view.addSubview(spinner)
+        
+        NSLayoutConstraint.activate([
+            spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+    }
+}
+
+extension HomeViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         interactor?.didSelectRowAt(indexPath: indexPath)
@@ -98,14 +132,8 @@ extension HomeViewController: HomeDisplayLogic {
     func reloadData() {
         collectionView.reloadData()
     }
-}
-
-extension UIView {
-    func addSubviews(_ subviews: UIView...) {
-        subviews.forEach(addSubview)
-    }
     
-    static var identifier: String {
-        return String(describing: self)
+    func hideSpinner() {
+        spinner.stopAnimating()
     }
 }

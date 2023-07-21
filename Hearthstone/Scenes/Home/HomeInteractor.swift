@@ -13,6 +13,8 @@ protocol HomeBusinessLogic {
     func numberOfRows(for section: Int) -> Int
     func cellForRow(for section: Int) -> AnyObject?
     func didSelectRowAt(indexPath: IndexPath)
+    
+    var navTitle: String { get }
 }
 
 protocol HomeDataStore {
@@ -30,6 +32,8 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
             }
         }
     }
+    
+    var navTitle: String = "Hall of Fame"
 
     private let service: NetworkProviderProtocol
     
@@ -57,6 +61,7 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
                 switch result {
                 case .success(let cards):
                     self.cards = cards.hallOfFame
+                    self.presenter?.hideSpinner()
 //                    self.presenter?.presentCards()
                 case .failure(let failure):
                     print(failure)
