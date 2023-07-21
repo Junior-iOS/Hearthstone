@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomeDisplayLogic: AnyObject {
-    func displayCards()
+    func displayCard()
     func reloadData()
     func hideSpinner()
 }
@@ -21,6 +21,17 @@ class HomeViewController: UICollectionViewController {
         spinner.startAnimating()
         spinner.hidesWhenStopped = true
         return spinner
+    }()
+    
+    private lazy var textLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.textColor = .label
+        label.font = .systemFont(ofSize: 14, weight: .bold)
+        label.text = "Bear with me, this might take a few seconds!\n🤷🏻"
+        return label
     }()
     
     // MARK: Clean Swift
@@ -50,7 +61,7 @@ class HomeViewController: UICollectionViewController {
     
     private func setupView() {
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: UICollectionViewCell.identifier)
-        title = interactor?.navTitle // Alterar para Bundle
+        navigationItem.title = "Hall of Fame"
         
         view.backgroundColor = .systemBackground
 
@@ -80,7 +91,7 @@ class HomeViewController: UICollectionViewController {
     private static func createLayout() -> UICollectionViewCompositionalLayout {
         return UICollectionViewCompositionalLayout { (sectionNumber, env) -> NSCollectionLayoutSection? in
             let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(0.25),
-                                                                heightDimension: .absolute(150)))
+                                                                heightDimension: .absolute(140)))
             item.contentInsets.trailing = 16
             item.contentInsets.bottom = 16
             
@@ -98,11 +109,15 @@ class HomeViewController: UICollectionViewController {
     }
     
     private func addComponents() {
-        view.addSubview(spinner)
+        view.addSubviews(spinner, textLabel)
         
         NSLayoutConstraint.activate([
             spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            
+            textLabel.topAnchor.constraint(equalTo: spinner.bottomAnchor, constant: 16),
+            textLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            textLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])
     }
 }
@@ -120,12 +135,13 @@ extension HomeViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UICollectionViewCell.identifier, for: indexPath)
         cell.backgroundColor = .systemRed
+        
         return cell
     }
 }
 
 extension HomeViewController: HomeDisplayLogic {
-    func displayCards() {
+    func displayCard() {
         router?.routeToCardDetails()
     }
     
@@ -134,6 +150,7 @@ extension HomeViewController: HomeDisplayLogic {
     }
     
     func hideSpinner() {
+        textLabel.isHidden = true
         spinner.stopAnimating()
     }
 }

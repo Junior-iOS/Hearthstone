@@ -11,7 +11,7 @@ import UIKit
 protocol HomeBusinessLogic {
     func fetchCards()
     func numberOfRows(for section: Int) -> Int
-    func cellForRow(for section: Int) -> AnyObject?
+    func cellForRow(for section: Int) -> [Card]?
     func didSelectRowAt(indexPath: IndexPath)
     
     var navTitle: String { get }
@@ -19,6 +19,7 @@ protocol HomeBusinessLogic {
 
 protocol HomeDataStore {
     var cards: [Card]? { get set }
+    var selectedCard: Card? { get set }
 }
 
 class HomeInteractor: HomeBusinessLogic, HomeDataStore {
@@ -33,7 +34,8 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
         }
     }
     
-    var navTitle: String = "Hall of Fame"
+    var selectedCard: Card?
+    var navTitle: String = Bundle.main.title
 
     private let service: NetworkProviderProtocol
     
@@ -45,12 +47,14 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
         cards?.count ?? 0
     }
     
-    func cellForRow(for section: Int) -> AnyObject? {
-        return nil
+    func cellForRow(for section: Int) -> [Card]? {
+        return cards
     }
     
     func didSelectRowAt(indexPath: IndexPath) {
-        print(indexPath.row)
+        guard let card = cards?[indexPath.row] else { return }
+        selectedCard = card
+        self.presenter?.presentCard()
     }
     
     func fetchCards() {
@@ -62,7 +66,6 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
                 case .success(let cards):
                     self.cards = cards.hallOfFame
                     self.presenter?.hideSpinner()
-//                    self.presenter?.presentCards()
                 case .failure(let failure):
                     print(failure)
                 }

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomePresentationLogic {
-    func presentCards()
+    func presentCard()
     func reloadData()
     func hideSpinner()
 }
@@ -17,8 +17,8 @@ protocol HomePresentationLogic {
 class HomePresenter: HomePresentationLogic {
     weak var viewController: HomeDisplayLogic?
 
-    func presentCards() {
-        viewController?.displayCards()
+    func presentCard() {
+        viewController?.displayCard()
     }
     
     func reloadData() {

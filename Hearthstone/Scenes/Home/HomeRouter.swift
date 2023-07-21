@@ -31,6 +31,6 @@ class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing {
 
     // MARK: Navigation
     func passSpotlightDataToDetail(source: HomeDataStore, destination: inout DetailsDataStore) {
-        destination.cards = source.cards
+        destination.selectedCard = source.selectedCard
     }
 }
