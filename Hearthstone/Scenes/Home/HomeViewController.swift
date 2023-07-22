@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Reachability
 
 protocol HomeDisplayLogic: AnyObject {
     func displayCard()
+    func displayError()
     func reloadData()
     func hideSpinner()
 }
@@ -37,7 +39,7 @@ class HomeViewController: UICollectionViewController {
     // MARK: Clean Swift
     var interactor: HomeBusinessLogic?
     var router: (NSObjectProtocol & HomeRoutingLogic & HomeDataPassing)?
-
+    
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,34 +48,35 @@ class HomeViewController: UICollectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        interactor?.fetchCards()
         setupView()
     }
     
     init() {
         super.init(collectionViewLayout: HomeViewController.createLayout())
     }
-
+    
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         nil
     }
     
     private func setupView() {
+        view.backgroundColor = .systemBackground
+        
         collectionView.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: CardCollectionViewCell.identifier)
+        collectionView.backgroundColor = UIColor(red: 0.11, green: 0.11, blue: 0.12, alpha: 1.00)
+        
         navigationItem.title = "Hall of Fame"
         
-        view.backgroundColor = .systemBackground
-
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
-
+        
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
         
         addComponents()
     }
-
+    
     // MARK: Setup
     private func setup() {
         let viewController = self
@@ -131,7 +134,7 @@ extension HomeViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         interactor?.numberOfRows(for: section) ?? 0
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: CardCollectionViewCell.identifier,
@@ -149,6 +152,10 @@ extension HomeViewController {
 extension HomeViewController: HomeDisplayLogic {
     func displayCard() {
         router?.routeToCardDetails()
+    }
+    
+    func displayError() {
+        
     }
     
     func reloadData() {

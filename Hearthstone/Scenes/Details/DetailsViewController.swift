@@ -9,7 +9,7 @@
 import UIKit
 
 protocol DetailsDisplayLogic: AnyObject {
-    
+    func displaySelectedCard(_ card: Card?)
 }
 
 class DetailsViewController: UIViewController {
@@ -49,5 +49,7 @@ class DetailsViewController: UIViewController {
 }
 
 extension DetailsViewController: DetailsDisplayLogic {
-
+    func displaySelectedCard(_ card: Card?) {
+        print(card)
+    }
 }

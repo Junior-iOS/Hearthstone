@@ -10,6 +10,7 @@ import UIKit
 
 protocol HomePresentationLogic {
     func presentCard()
+    func presentError()
     func reloadData()
     func hideSpinner()
 }
@@ -19,6 +20,10 @@ class HomePresenter: HomePresentationLogic {
 
     func presentCard() {
         viewController?.displayCard()
+    }
+    
+    func presentError() {
+        viewController?.displayError()
     }
     
     func reloadData() {

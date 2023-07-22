@@ -23,6 +23,6 @@ class DetailsInteractor: DetailsBusinessLogic, DetailsDataStore {
     var selectedCard: Card?
 
     func showSelectedCard() {
-        
+        presenter?.presentSelectedCard(selectedCard)
     }
 }

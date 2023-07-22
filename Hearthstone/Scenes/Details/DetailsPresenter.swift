@@ -9,10 +9,13 @@
 import UIKit
 
 protocol DetailsPresentationLogic {
-    
+    func presentSelectedCard(_ card: Card?)
 }
 
 class DetailsPresenter: DetailsPresentationLogic {
     weak var viewController: DetailsDisplayLogic?
 
+    func presentSelectedCard(_ card: Card?) {
+        viewController?.displaySelectedCard(card)
+    }
 }
