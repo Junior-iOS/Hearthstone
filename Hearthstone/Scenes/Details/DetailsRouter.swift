@@ -17,7 +17,7 @@ protocol DetailsDataPassing {
 }
 
 class DetailsRouter: NSObject, DetailsRoutingLogic, DetailsDataPassing {
-    weak var viewController: DetailsViewController?
+    weak var viewController: CardDetailsViewController?
     var dataStore: DetailsDataStore?
 
     // MARK: Routing

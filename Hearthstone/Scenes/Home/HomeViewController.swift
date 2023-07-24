@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import Reachability
 
 protocol HomeDisplayLogic: AnyObject {
     func displayCard()
-    func displayError()
+    func displayError(_ error: NetworkError)
+    func displayAlert()
     func reloadData()
     func hideSpinner()
 }
@@ -32,8 +32,16 @@ class HomeViewController: UICollectionViewController {
         label.numberOfLines = 0
         label.textColor = .label
         label.font = .systemFont(ofSize: 14, weight: .bold)
-        label.text = "Bear with me, this might take a few seconds!\n🤷🏻"
+        label.text = "Bear with me...\nThis might take a few seconds!\n\n🐻"
         return label
+    }()
+    
+    private lazy var internetOutImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = UIImage(named: "internet_outage")
+        imageView.contentMode = .scaleAspectFit
+        return imageView
     }()
     
     // MARK: Clean Swift
@@ -49,6 +57,12 @@ class HomeViewController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupView()
+        
+        if NetworkMonitor.shared.isConnected {
+            interactor?.fetchCards()
+        } else {
+            interactor?.showAlert()
+        }
     }
     
     init() {
@@ -62,6 +76,7 @@ class HomeViewController: UICollectionViewController {
     
     private func setupView() {
         view.backgroundColor = .systemBackground
+        internetOutImage.isHidden = true
         
         collectionView.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: CardCollectionViewCell.identifier)
         collectionView.backgroundColor = UIColor(red: 0.11, green: 0.11, blue: 0.12, alpha: 1.00)
@@ -112,7 +127,7 @@ class HomeViewController: UICollectionViewController {
     }
     
     private func addComponents() {
-        view.addSubviews(spinner, textLabel)
+        view.addSubviews(spinner, textLabel, internetOutImage)
         
         NSLayoutConstraint.activate([
             spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -120,7 +135,12 @@ class HomeViewController: UICollectionViewController {
             
             textLabel.topAnchor.constraint(equalTo: spinner.bottomAnchor, constant: 16),
             textLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            textLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+            textLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            
+            internetOutImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            internetOutImage.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            internetOutImage.heightAnchor.constraint(equalToConstant: 300),
+            internetOutImage.widthAnchor.constraint(equalToConstant: 300)
         ])
     }
 }
@@ -154,8 +174,12 @@ extension HomeViewController: HomeDisplayLogic {
         router?.routeToCardDetails()
     }
     
-    func displayError() {
-        
+    func displayError(_ error: NetworkError) {
+        showAlert(message: error.localizedDescription)
+    }
+    
+    func displayAlert() {
+        internetOutImage.isHidden = false
     }
     
     func reloadData() {

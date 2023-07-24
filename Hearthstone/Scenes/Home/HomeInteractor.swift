@@ -10,6 +10,8 @@ import UIKit
 
 protocol HomeBusinessLogic {
     func fetchCards()
+    func showAlert()
+    
     func numberOfRows(for section: Int) -> Int
     func cellForRow(at index: Int) -> Card?
     func didSelectRowAt(indexPath: IndexPath)
@@ -24,7 +26,6 @@ protocol HomeDataStore {
 
 class HomeInteractor: HomeBusinessLogic, HomeDataStore {
     var presenter: HomePresentationLogic?
-    var worker: HomeWorker?
     
     var cards: [Card]? {
         didSet {
@@ -36,7 +37,7 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
     
     var selectedCard: Card?
     var navTitle: String = Bundle.main.title
-
+    
     private let service: NetworkProviderProtocol
     
     init(service: NetworkProviderProtocol = NetworkProvider()) {
@@ -66,10 +67,14 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
                 case .success(let cards):
                     self.cards = cards.hallOfFame
                     self.presenter?.hideSpinner()
-                case .failure(let failure):
-                    print(failure)
+                case .failure(let error):
+                    self.presenter?.presentError(error)
                 }
             }
         }
+    }
+    
+    func showAlert() {
+        presenter?.presentAlert()
     }
 }

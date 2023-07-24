@@ -16,12 +16,29 @@ extension UIView {
         return String(describing: self)
     }
     
-    func addShadow() {
-        layer.shadowOpacity = 0.5
-        layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
-        layer.shadowRadius = 3.0
-        layer.shadowColor = UIColor.systemRed.cgColor
+    func addShadow(_ color: CGColor?) {
+        layer.shadowOpacity = 0.7
+        layer.shadowOffset = CGSize(width: 1.0, height: 2.0)
+        layer.shadowRadius = 5.0
+        layer.shadowColor = color
         layer.masksToBounds = false
+    }
+    
+    func createLabel(ofSize fontSize: CGFloat,
+                     weight: UIFont.Weight = .regular,
+                     alignment: NSTextAlignment = .center,
+                     cornerRadius: CGFloat = 0) -> UILabel {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: fontSize, weight: weight)
+        label.numberOfLines = 0
+        label.text = "Yet to be discovered!"
+        label.textColor = .black
+        label.textAlignment = alignment
+        label.layer.cornerRadius = cornerRadius
+        label.clipsToBounds = true
+        
+        return label
     }
 }
 

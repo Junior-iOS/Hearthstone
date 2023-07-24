@@ -16,10 +16,9 @@ protocol DetailsDataStore {
     var selectedCard: Card? { get set }
 }
 
-class DetailsInteractor: DetailsBusinessLogic, DetailsDataStore {
+class CardDetailsInteractor: DetailsBusinessLogic, DetailsDataStore {
     
     var presenter: DetailsPresentationLogic?
-    var worker: DetailsWorker?
     var selectedCard: Card?
 
     func showSelectedCard() {

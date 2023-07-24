@@ -10,7 +10,8 @@ import UIKit
 
 protocol HomePresentationLogic {
     func presentCard()
-    func presentError()
+    func presentError(_ error: NetworkError)
+    func presentAlert()
     func reloadData()
     func hideSpinner()
 }
@@ -22,8 +23,12 @@ class HomePresenter: HomePresentationLogic {
         viewController?.displayCard()
     }
     
-    func presentError() {
-        viewController?.displayError()
+    func presentError(_ error: NetworkError) {
+        viewController?.displayError(error)
+    }
+    
+    func presentAlert() {
+        viewController?.displayAlert()
     }
     
     func reloadData() {

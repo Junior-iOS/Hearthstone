@@ -12,7 +12,7 @@ protocol DetailsPresentationLogic {
     func presentSelectedCard(_ card: Card?)
 }
 
-class DetailsPresenter: DetailsPresentationLogic {
+class CardDetailsPresenter: DetailsPresentationLogic {
     weak var viewController: DetailsDisplayLogic?
 
     func presentSelectedCard(_ card: Card?) {

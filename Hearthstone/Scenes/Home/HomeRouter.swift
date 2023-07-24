@@ -22,7 +22,7 @@ class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing {
 
     // MARK: Routing
     func routeToCardDetails() {
-        let vc = DetailsViewController()
+        let vc = CardDetailsViewController()
         guard let destinationDataStore = vc.router?.dataStore else { return }
         var destinationDS = destinationDataStore
         passSpotlightDataToDetail(source: dataStore!, destination: &destinationDS)

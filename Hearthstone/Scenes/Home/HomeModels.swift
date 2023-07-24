@@ -38,15 +38,3 @@ struct Card: Codable {
         self.health = health
     }
 }
-
-//A imagem principal do cartão
-//Nome
-//Descrição "flavor"
-//Descrição curta
-//Set pertencente
-//Tipo
-//Facção
-//Raridade
-//Ataque
-//Custo
-//Health

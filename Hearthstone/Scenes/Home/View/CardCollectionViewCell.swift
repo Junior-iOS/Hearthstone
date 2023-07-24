@@ -16,7 +16,7 @@ class CardCollectionViewCell: UICollectionViewCell {
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 5
         imageView.clipsToBounds = true
-        imageView.addShadow()
+        imageView.addShadow(UIColor.systemRed.cgColor)
         return imageView
     }()
     

@@ -3,7 +3,7 @@
 //  Hearthstone
 //
 //  Created by NJ Development on 18/07/23.
-// https://omgvamp-hearthstone-v1.p.rapidapi.com/cards
+//
 
 import Foundation
 
