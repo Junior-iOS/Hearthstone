@@ -33,7 +33,7 @@ extension UIView {
         label.font = .systemFont(ofSize: fontSize, weight: weight)
         label.numberOfLines = 0
         label.text = "Yet to be discovered!"
-        label.textColor = .black
+        label.textColor = UIColor(red: 0.10, green: 0.12, blue: 0.21, alpha: 1.00)
         label.textAlignment = alignment
         label.layer.cornerRadius = cornerRadius
         label.clipsToBounds = true

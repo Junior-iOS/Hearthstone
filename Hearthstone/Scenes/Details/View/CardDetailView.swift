@@ -24,10 +24,10 @@ final class CardDetailView: UIView {
     private lazy var detailBackgroundView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .secondarySystemGroupedBackground
+        view.backgroundColor = UIColor(red: 0.78, green: 0.67, blue: 0.53, alpha: 1.00)
         view.layer.cornerRadius = 20
         view.clipsToBounds = true
-        view.addShadow(UIColor.systemGreen.cgColor)
+        view.addShadow(UIColor.systemYellow.cgColor)
         return view
     }()
     
@@ -81,27 +81,21 @@ final class CardDetailView: UIView {
         let stack = UIStackView(arrangedSubviews: [textLabel, flavorLabel])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
-        stack.distribution = .fill
+        stack.distribution = .fillProportionally
         stack.spacing = 16
         return stack
     }()
     
     private lazy var setLabel: UILabel = {
-        createLabel(ofSize: 14,
-                    weight: .semibold
-        )
+        createLabel(ofSize: 14, weight: .semibold)
     }()
     
     private lazy var factionLabel: UILabel = {
-        createLabel(ofSize: 14,
-                    weight: .semibold
-        )
+        createLabel(ofSize: 14, weight: .semibold)
     }()
     
     private lazy var rarityLabel: UILabel = {
-        createLabel(ofSize: 14,
-                    weight: .semibold
-        )
+        createLabel(ofSize: 14, weight: .semibold)
     }()
     
     private lazy var setFactionRarityStack: UIStackView = {
@@ -120,7 +114,7 @@ final class CardDetailView: UIView {
                                                    setFactionRarityStack])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
-        stack.distribution = .fillEqually
+        stack.distribution = .fillProportionally
         return stack
     }()
     
@@ -159,19 +153,21 @@ final class CardDetailView: UIView {
             nameTypeStack.topAnchor.constraint(equalTo: vStack.topAnchor),
             nameTypeStack.leadingAnchor.constraint(equalTo: vStack.leadingAnchor),
             nameTypeStack.trailingAnchor.constraint(equalTo: vStack.trailingAnchor),
+            nameTypeStack.heightAnchor.constraint(equalToConstant: 50),
             
             costAttackHealthStack.topAnchor.constraint(equalTo: nameTypeStack.bottomAnchor),
             costAttackHealthStack.leadingAnchor.constraint(equalTo: nameTypeStack.leadingAnchor),
             costAttackHealthStack.trailingAnchor.constraint(equalTo: nameTypeStack.trailingAnchor),
-
+            
             textFlavorStack.topAnchor.constraint(equalTo: costAttackHealthStack.bottomAnchor),
             textFlavorStack.leadingAnchor.constraint(equalTo: costAttackHealthStack.leadingAnchor),
             textFlavorStack.trailingAnchor.constraint(equalTo: costAttackHealthStack.trailingAnchor),
-
+            
             setFactionRarityStack.topAnchor.constraint(equalTo: textFlavorStack.bottomAnchor),
             setFactionRarityStack.leadingAnchor.constraint(equalTo: textFlavorStack.leadingAnchor),
             setFactionRarityStack.trailingAnchor.constraint(equalTo: textFlavorStack.trailingAnchor),
-            setFactionRarityStack.bottomAnchor.constraint(equalTo: vStack.bottomAnchor)
+            setFactionRarityStack.bottomAnchor.constraint(equalTo: vStack.bottomAnchor),
+            setFactionRarityStack.heightAnchor.constraint(equalToConstant: 100)
         ])
     }
     
@@ -182,8 +178,8 @@ final class CardDetailView: UIView {
             self.costLabel.text = "COST\n\(card.cost ?? 0)"
             self.attackLabel.text = "ATTACK\n\(card.attack ?? 0)"
             self.healthLabel.text = "HEALTH\n\(card.health ?? 0)"
-            self.textLabel.text = card.text
-            self.flavorLabel.text = (card.flavor)
+            self.textLabel.text = card.text?.removeHTML()
+            self.flavorLabel.text = card.flavor?.removeHTML()
             self.setLabel.text = "SET\n\(card.cardSet ?? self.emptyText)"
             self.factionLabel.text = "FACTION\n\(card.faction ?? self.emptyText)"
             self.rarityLabel.text = "RARITY\n\(card.rarity ?? self.emptyText)"
