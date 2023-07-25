@@ -7,97 +7,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "65C22B47-E4AE-4753-9AB7-D22DB90566D4"
+            uuid = "A5221DF4-56A8-4408-91FA-FBF78947F7E1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hearthstone/Scenes/Home/HomeInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "fetchCards()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "65C22B47-E4AE-4753-9AB7-D22DB90566D4 - 407af68874dcd7f3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Hearthstone.Home.Response, Hearthstone.NetworkError&gt;) -&gt; () in Hearthstone.HomeInteractor.fetchCards() -&gt; ()"
-                  moduleName = "Hearthstone"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juniorsilva/Projetos%20iOS/Hearthstone/Hearthstone/Scenes/Home/HomeInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "72"
-                  endingLineNumber = "72"
-                  offsetFromSymbolStart = "433">
-               </Location>
-               <Location
-                  uuid = "65C22B47-E4AE-4753-9AB7-D22DB90566D4 - 407af68874dcd712"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Hearthstone.Home.Response, Hearthstone.NetworkError&gt;) -&gt; () in Hearthstone.HomeInteractor.fetchCards() -&gt; ()"
-                  moduleName = "Hearthstone"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juniorsilva/Projetos%20iOS/Hearthstone/Hearthstone/Scenes/Home/HomeInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "430">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "31C2D3F9-E56E-4B49-9190-530BD489C582"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hearthstone/Scenes/Home/HomePresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "presentError(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "149EEBC8-C85B-4B2D-AFDB-EEE723A98CAD"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hearthstone/Scenes/Details/View/CardDetailView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "textFlavorStack"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1792A08C-192D-46DC-A810-1AD6342EF962"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hearthstone/Scenes/Details/View/CardDetailView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "vStack"
-            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

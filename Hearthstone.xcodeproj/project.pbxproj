@@ -12,11 +12,15 @@
 		143C78EB2A6E1D45007E7AB1 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C78EA2A6E1D45007E7AB1 /* UIViewController+Extensions.swift */; };
 		143C78ED2A6E20D8007E7AB1 /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C78EC2A6E20D8007E7AB1 /* DetailsRouter.swift */; };
 		143C78EF2A6E23D3007E7AB1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C78EE2A6E23D3007E7AB1 /* String+Extensions.swift */; };
+		143C78F22A6F3F54007E7AB1 /* CardDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C78F12A6F3F54007E7AB1 /* CardDetailsInteractorTests.swift */; };
+		143C78F52A6F5A62007E7AB1 /* CardListSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C78F42A6F5A62007E7AB1 /* CardListSnapshotTests.swift */; };
+		143C78F72A6F5BE7007E7AB1 /* CardCollectionViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C78F62A6F5BE7007E7AB1 /* CardCollectionViewCellTests.swift */; };
+		143C78F92A6F5E47007E7AB1 /* CardDetailsSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C78F82A6F5E47007E7AB1 /* CardDetailsSnapshotTests.swift */; };
 		1483958E2A664F20007B3704 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483958D2A664F20007B3704 /* AppDelegate.swift */; };
 		148395902A664F20007B3704 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483958F2A664F20007B3704 /* SceneDelegate.swift */; };
 		148395972A664F24007B3704 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148395962A664F24007B3704 /* Assets.xcassets */; };
 		1483959A2A664F24007B3704 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148395982A664F24007B3704 /* LaunchScreen.storyboard */; };
-		148395A52A664F24007B3704 /* HearthstoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395A42A664F24007B3704 /* HearthstoneTests.swift */; };
+		148395A52A664F24007B3704 /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395A42A664F24007B3704 /* HomeInteractorTests.swift */; };
 		148395AF2A664F24007B3704 /* HearthstoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395AE2A664F24007B3704 /* HearthstoneUITests.swift */; };
 		148395B12A664F24007B3704 /* HearthstoneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395B02A664F24007B3704 /* HearthstoneUITestsLaunchTests.swift */; };
 		148395D22A6654B2007B3704 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148395CC2A6654B2007B3704 /* HomePresenter.swift */; };
@@ -63,6 +67,10 @@
 		143C78EA2A6E1D45007E7AB1 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		143C78EC2A6E20D8007E7AB1 /* DetailsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
 		143C78EE2A6E23D3007E7AB1 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		143C78F12A6F3F54007E7AB1 /* CardDetailsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsInteractorTests.swift; sourceTree = "<group>"; };
+		143C78F42A6F5A62007E7AB1 /* CardListSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListSnapshotTests.swift; sourceTree = "<group>"; };
+		143C78F62A6F5BE7007E7AB1 /* CardCollectionViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCellTests.swift; sourceTree = "<group>"; };
+		143C78F82A6F5E47007E7AB1 /* CardDetailsSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsSnapshotTests.swift; sourceTree = "<group>"; };
 		1483958A2A664F20007B3704 /* Hearthstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hearthstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1483958D2A664F20007B3704 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1483958F2A664F20007B3704 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +78,7 @@
 		148395992A664F24007B3704 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1483959B2A664F24007B3704 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		148395A02A664F24007B3704 /* HearthstoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HearthstoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		148395A42A664F24007B3704 /* HearthstoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearthstoneTests.swift; sourceTree = "<group>"; };
+		148395A42A664F24007B3704 /* HomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
 		148395AA2A664F24007B3704 /* HearthstoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HearthstoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		148395AE2A664F24007B3704 /* HearthstoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearthstoneUITests.swift; sourceTree = "<group>"; };
 		148395B02A664F24007B3704 /* HearthstoneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearthstoneUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -135,6 +143,41 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		143C78F02A6F3F2F007E7AB1 /* Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				148395A42A664F24007B3704 /* HomeInteractorTests.swift */,
+				143C78F12A6F3F54007E7AB1 /* CardDetailsInteractorTests.swift */,
+			);
+			path = "Unit Tests";
+			sourceTree = "<group>";
+		};
+		143C78F32A6F595D007E7AB1 /* Snapshot Tests */ = {
+			isa = PBXGroup;
+			children = (
+				143C78FA2A6F5E77007E7AB1 /* Home */,
+				143C78FB2A6F5E7D007E7AB1 /* Details */,
+			);
+			path = "Snapshot Tests";
+			sourceTree = "<group>";
+		};
+		143C78FA2A6F5E77007E7AB1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				143C78F42A6F5A62007E7AB1 /* CardListSnapshotTests.swift */,
+				143C78F62A6F5BE7007E7AB1 /* CardCollectionViewCellTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		143C78FB2A6F5E7D007E7AB1 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				143C78F82A6F5E47007E7AB1 /* CardDetailsSnapshotTests.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		148395812A664F20007B3704 = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +216,8 @@
 		148395A32A664F24007B3704 /* HearthstoneTests */ = {
 			isa = PBXGroup;
 			children = (
-				148395A42A664F24007B3704 /* HearthstoneTests.swift */,
+				143C78F02A6F3F2F007E7AB1 /* Unit Tests */,
+				143C78F32A6F595D007E7AB1 /* Snapshot Tests */,
 			);
 			path = HearthstoneTests;
 			sourceTree = "<group>";
@@ -586,7 +630,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				148395A52A664F24007B3704 /* HearthstoneTests.swift in Sources */,
+				143C78F72A6F5BE7007E7AB1 /* CardCollectionViewCellTests.swift in Sources */,
+				143C78F52A6F5A62007E7AB1 /* CardListSnapshotTests.swift in Sources */,
+				143C78F22A6F3F54007E7AB1 /* CardDetailsInteractorTests.swift in Sources */,
+				148395A52A664F24007B3704 /* HomeInteractorTests.swift in Sources */,
+				143C78F92A6F5E47007E7AB1 /* CardDetailsSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

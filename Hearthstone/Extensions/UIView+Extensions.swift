@@ -11,11 +11,11 @@ extension UIView {
     func addSubviews(_ subviews: UIView...) {
         subviews.forEach(addSubview)
     }
-    
+
     static var identifier: String {
-        return String(describing: self)
+        String(describing: self)
     }
-    
+
     func addShadow(_ color: CGColor?) {
         layer.shadowOpacity = 0.7
         layer.shadowOffset = CGSize(width: 1.0, height: 2.0)
@@ -23,7 +23,7 @@ extension UIView {
         layer.shadowColor = color
         layer.masksToBounds = false
     }
-    
+
     func createLabel(ofSize fontSize: CGFloat,
                      weight: UIFont.Weight = .regular,
                      alignment: NSTextAlignment = .center,
@@ -37,8 +37,7 @@ extension UIView {
         label.textAlignment = alignment
         label.layer.cornerRadius = cornerRadius
         label.clipsToBounds = true
-        
+
         return label
     }
 }
-

@@ -22,19 +22,19 @@ class HomePresenter: HomePresentationLogic {
     func presentCard() {
         viewController?.displayCard()
     }
-    
+
     func presentError(_ error: NetworkError) {
         viewController?.displayError(error)
     }
-    
+
     func presentAlert() {
         viewController?.displayAlert()
     }
-    
+
     func reloadData() {
         viewController?.reloadData()
     }
-    
+
     func hideSpinner() {
         viewController?.hideSpinner()
     }

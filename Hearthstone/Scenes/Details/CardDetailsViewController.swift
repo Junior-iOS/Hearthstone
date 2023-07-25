@@ -13,8 +13,9 @@ protocol DetailsDisplayLogic: AnyObject {
 }
 
 class CardDetailsViewController: UIViewController {
+    // MARK: - Properties
     private let cardDetailsView = CardDetailView()
-    
+
     // MARK: Clean Swift
     var interactor: DetailsBusinessLogic?
     var router: (NSObjectProtocol & DetailsRoutingLogic & DetailsDataPassing)?
@@ -29,18 +30,19 @@ class CardDetailsViewController: UIViewController {
         super.init(coder: aDecoder)
         setup()
     }
-    
+
     override func loadView() {
         super.loadView()
         self.view = cardDetailsView
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         interactor?.showSelectedCard()
     }
 
+    // MARK: - Methods
     private func setup() {
         let viewController = self
         let interactor = CardDetailsInteractor()
@@ -53,7 +55,7 @@ class CardDetailsViewController: UIViewController {
         router.viewController = viewController
         router.dataStore = interactor
     }
-    
+
     private func setupView() {
         view.backgroundColor = UIColor(red: 0.11, green: 0.11, blue: 0.12, alpha: 1.00)
     }
@@ -61,7 +63,7 @@ class CardDetailsViewController: UIViewController {
 
 extension CardDetailsViewController: DetailsDisplayLogic {
     func displaySelectedCard(_ card: Card?) {
-        guard let card = card else { return }
+        guard let card else { return }
         cardDetailsView.configureView(with: card)
     }
 }

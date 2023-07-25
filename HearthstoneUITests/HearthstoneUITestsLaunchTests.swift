@@ -8,7 +8,6 @@
 import XCTest
 
 final class HearthstoneUITestsLaunchTests: XCTestCase {
-
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }

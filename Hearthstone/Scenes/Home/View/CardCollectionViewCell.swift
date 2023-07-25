@@ -5,10 +5,11 @@
 //  Created by NJ Development on 21/07/23.
 //
 
-import UIKit
 import SDWebImage
+import UIKit
 
 class CardCollectionViewCell: UICollectionViewCell {
+    // MARK: - Properties
     private lazy var cardImage: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -19,7 +20,8 @@ class CardCollectionViewCell: UICollectionViewCell {
         imageView.addShadow(UIColor.systemRed.cgColor)
         return imageView
     }()
-    
+
+    // MARK: - INIT
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupCell()
@@ -29,7 +31,8 @@ class CardCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         nil
     }
-    
+
+    // MARK: - Methods
     override func prepareForReuse() {
         super.prepareForReuse()
         cardImage.image = UIImage(named: "card")
@@ -45,11 +48,11 @@ class CardCollectionViewCell: UICollectionViewCell {
             cardImage.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -.kMargins)
         ])
     }
-    
-    public func configure(with card: Card) {
+
+    func configure(with card: Card) {
         guard let img = card.img,
               let url = URL(string: img) else { return }
-        
+
         DispatchQueue.main.async {
             self.cardImage.sd_setImage(with: url)
         }

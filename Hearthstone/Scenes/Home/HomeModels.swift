@@ -11,17 +11,17 @@ import UIKit
 enum Home {
     struct Response: Codable {
         let hallOfFame: [Card]?
-        
+
         enum CodingKeys: String, CodingKey {
             case hallOfFame = "Hall of Fame"
         }
     }
 }
 
-struct Card: Codable {
+struct Card: Codable, Equatable {
     let img, name, flavor, text, cardSet, type, faction, rarity: String?
     let attack, cost, health: Int?
-    
+
     init(img: String?, name: String?, flavor: String?, text: String?, cardSet: String?,
          type: String?, faction: String?, rarity: String?,
          attack: Int?, cost: Int?, health: Int?) {

@@ -17,7 +17,6 @@ protocol DetailsDataStore {
 }
 
 class CardDetailsInteractor: DetailsBusinessLogic, DetailsDataStore {
-    
     var presenter: DetailsPresentationLogic?
     var selectedCard: Card?
 

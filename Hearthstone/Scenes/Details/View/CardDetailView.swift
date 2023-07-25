@@ -5,11 +5,11 @@
 //  Created by NJ Development on 22/07/23.
 //
 
-import UIKit
 import SDWebImage
+import UIKit
 
 final class CardDetailView: UIView {
-    
+    // MARK: - Properties
     private lazy var cardImage: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -20,7 +20,7 @@ final class CardDetailView: UIView {
         imageView.addShadow(UIColor.systemYellow.cgColor)
         return imageView
     }()
-    
+
     private lazy var detailBackgroundView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -30,15 +30,15 @@ final class CardDetailView: UIView {
         view.addShadow(UIColor.systemYellow.cgColor)
         return view
     }()
-    
+
     private lazy var nameLabel: UILabel = {
         createLabel(ofSize: 17, weight: .bold)
     }()
-    
+
     private lazy var typeLabel: UILabel = {
         createLabel(ofSize: 17, weight: .bold)
     }()
-    
+
     private lazy var nameTypeStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [nameLabel, typeLabel])
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -47,19 +47,19 @@ final class CardDetailView: UIView {
         stack.spacing = 8
         return stack
     }()
-    
+
     private lazy var costLabel: UILabel = {
         createLabel(ofSize: 14, weight: .semibold)
     }()
-    
+
     private lazy var attackLabel: UILabel = {
         createLabel(ofSize: 14, weight: .semibold)
     }()
-    
+
     private lazy var healthLabel: UILabel = {
         createLabel(ofSize: 14, weight: .semibold)
     }()
-    
+
     private lazy var costAttackHealthStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [costLabel, attackLabel, healthLabel])
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -68,15 +68,15 @@ final class CardDetailView: UIView {
         stack.spacing = 8
         return stack
     }()
-    
+
     private lazy var textLabel: UILabel = {
         createLabel(ofSize: 16, weight: .regular)
     }()
-    
+
     private lazy var flavorLabel: UILabel = {
         createLabel(ofSize: 16, weight: .regular)
     }()
-    
+
     private lazy var textFlavorStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [textLabel, flavorLabel])
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -85,19 +85,19 @@ final class CardDetailView: UIView {
         stack.spacing = 16
         return stack
     }()
-    
+
     private lazy var setLabel: UILabel = {
         createLabel(ofSize: 14, weight: .semibold)
     }()
-    
+
     private lazy var factionLabel: UILabel = {
         createLabel(ofSize: 14, weight: .semibold)
     }()
-    
+
     private lazy var rarityLabel: UILabel = {
         createLabel(ofSize: 14, weight: .semibold)
     }()
-    
+
     private lazy var setFactionRarityStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [setLabel, factionLabel, rarityLabel])
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -106,7 +106,7 @@ final class CardDetailView: UIView {
         stack.spacing = 8
         return stack
     }()
-    
+
     private lazy var vStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [nameTypeStack,
                                                    costAttackHealthStack,
@@ -117,60 +117,62 @@ final class CardDetailView: UIView {
         stack.distribution = .fillProportionally
         return stack
     }()
-    
-    private lazy var emptyText = "Yet to be discovered"
-    
+
+    private let emptyText = "Yet to be revealed"
+
+    // MARK: - INIT
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
-    
+
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         nil
     }
-    
+
+    // MARK: - Methods
     private func setup() {
         addSubviews(cardImage, detailBackgroundView)
         detailBackgroundView.addSubviews(vStack)
-        
+
         NSLayoutConstraint.activate([
-            cardImage.topAnchor.constraint(equalTo: topAnchor, constant: 5),
+            cardImage.topAnchor.constraint(equalTo: topAnchor, constant: .kConstantFive),
             cardImage.leadingAnchor.constraint(equalTo: leadingAnchor),
             cardImage.trailingAnchor.constraint(equalTo: trailingAnchor),
-            cardImage.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height / 3),
-            
-            detailBackgroundView.topAnchor.constraint(equalTo: cardImage.bottomAnchor, constant: 20),
+            cardImage.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height / .kConstantThree),
+
+            detailBackgroundView.topAnchor.constraint(equalTo: cardImage.bottomAnchor, constant: .kConstantTwenty),
             detailBackgroundView.leadingAnchor.constraint(equalTo: cardImage.leadingAnchor),
             detailBackgroundView.trailingAnchor.constraint(equalTo: cardImage.trailingAnchor),
             detailBackgroundView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
-            vStack.topAnchor.constraint(equalTo: detailBackgroundView.topAnchor, constant: 20),
-            vStack.leadingAnchor.constraint(equalTo: detailBackgroundView.leadingAnchor, constant: 20),
-            vStack.trailingAnchor.constraint(equalTo: detailBackgroundView.trailingAnchor, constant: -20),
-            vStack.bottomAnchor.constraint(equalTo: detailBackgroundView.bottomAnchor, constant: -30),
-            
+
+            vStack.topAnchor.constraint(equalTo: detailBackgroundView.topAnchor, constant: .kConstantTwenty),
+            vStack.leadingAnchor.constraint(equalTo: detailBackgroundView.leadingAnchor, constant: .kConstantTwenty),
+            vStack.trailingAnchor.constraint(equalTo: detailBackgroundView.trailingAnchor, constant: -.kConstantTwenty),
+            vStack.bottomAnchor.constraint(equalTo: detailBackgroundView.bottomAnchor, constant: -.kConstantThirty),
+
             nameTypeStack.topAnchor.constraint(equalTo: vStack.topAnchor),
             nameTypeStack.leadingAnchor.constraint(equalTo: vStack.leadingAnchor),
             nameTypeStack.trailingAnchor.constraint(equalTo: vStack.trailingAnchor),
-            nameTypeStack.heightAnchor.constraint(equalToConstant: 50),
-            
+            nameTypeStack.heightAnchor.constraint(equalToConstant: .kConstantFifty),
+
             costAttackHealthStack.topAnchor.constraint(equalTo: nameTypeStack.bottomAnchor),
             costAttackHealthStack.leadingAnchor.constraint(equalTo: nameTypeStack.leadingAnchor),
             costAttackHealthStack.trailingAnchor.constraint(equalTo: nameTypeStack.trailingAnchor),
-            
+
             textFlavorStack.topAnchor.constraint(equalTo: costAttackHealthStack.bottomAnchor),
             textFlavorStack.leadingAnchor.constraint(equalTo: costAttackHealthStack.leadingAnchor),
             textFlavorStack.trailingAnchor.constraint(equalTo: costAttackHealthStack.trailingAnchor),
-            
+
             setFactionRarityStack.topAnchor.constraint(equalTo: textFlavorStack.bottomAnchor),
             setFactionRarityStack.leadingAnchor.constraint(equalTo: textFlavorStack.leadingAnchor),
             setFactionRarityStack.trailingAnchor.constraint(equalTo: textFlavorStack.trailingAnchor),
             setFactionRarityStack.bottomAnchor.constraint(equalTo: vStack.bottomAnchor),
-            setFactionRarityStack.heightAnchor.constraint(equalToConstant: 100)
+            setFactionRarityStack.heightAnchor.constraint(equalToConstant: .kConstantOneHundred)
         ])
     }
-    
+
     func configureView(with card: Card) {
         DispatchQueue.main.async {
             self.nameLabel.text = card.name
@@ -183,10 +185,20 @@ final class CardDetailView: UIView {
             self.setLabel.text = "SET\n\(card.cardSet ?? self.emptyText)"
             self.factionLabel.text = "FACTION\n\(card.faction ?? self.emptyText)"
             self.rarityLabel.text = "RARITY\n\(card.rarity ?? self.emptyText)"
-            
+
             guard let img = card.img,
                   let url = URL(string: img) else { return }
             self.cardImage.sd_setImage(with: url)
         }
     }
+}
+
+// MARK: - Constants
+fileprivate extension CGFloat {
+    static let kConstantThree: CGFloat = 3
+    static let kConstantFive: CGFloat = 5
+    static let kConstantTwenty: CGFloat = 20
+    static let kConstantThirty: CGFloat = 30
+    static let kConstantFifty: CGFloat = 50
+    static let kConstantOneHundred: CGFloat = 100
 }

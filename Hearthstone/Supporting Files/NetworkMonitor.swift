@@ -5,10 +5,10 @@
 //  Created by NJ Development on 21/07/23.
 //
 
-import UIKit
 import Network
+import UIKit
 
-//final class Network {
+// final class Network {
 //    public private(set) var isConnected: Bool = false
 //    static func monitorNetwork() {
 //        let monitor = NWPathMonitor()
@@ -23,38 +23,38 @@ import Network
 //        let queue = DispatchQueue(label: "Network")
 //        monitor.start(queue: queue)
 //    }
-//}
+// }
 
 final class NetworkMonitor {
     static let shared = NetworkMonitor()
     private let monitor: NWPathMonitor
-    
+
     enum NetworkStatus {
         case internetOn
         case internetOff
         case unknown
     }
-    
-    public private(set) var isConnected: Bool = false
-    public private(set) var networkStatus: NetworkStatus = .unknown
-    
+
+    private(set) var isConnected = false
+    private(set) var networkStatus: NetworkStatus = .unknown
+
     private init() {
         monitor = NWPathMonitor()
     }
-    
-    public func startMonitoring() {
+
+    func startMonitoring() {
         monitor.pathUpdateHandler = { [weak self] path in
             self?.isConnected = path.status == .satisfied
         }
-        
+
         let queue = DispatchQueue(label: "Network")
         monitor.start(queue: queue)
     }
-    
-    public func stopMonitoring() {
+
+    func stopMonitoring() {
         monitor.cancel()
     }
-    
+
     private func getNetworkStatus(_ path: NWPath) -> NetworkStatus {
         if path.status == .satisfied {
             return .internetOn

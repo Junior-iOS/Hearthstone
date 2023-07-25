@@ -18,7 +18,7 @@ struct AllCardsEndpoint {
         urlComponents.path = path
         return urlComponents.url
     }
-    
+
     var headerKeyField: String {
         Bundle.main.headerKeyField
     }

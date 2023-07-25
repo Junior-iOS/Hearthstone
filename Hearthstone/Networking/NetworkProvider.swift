@@ -13,7 +13,7 @@ final class NetworkProvider: NetworkProviderProtocol {
             completion(.failure(.invalidEndpoint))
             return
         }
-        
+
         let headers = [
             endpoint.headerKeyField: endpoint.headerValue,
             endpoint.headerHostField: endpoint.headerHostValue
