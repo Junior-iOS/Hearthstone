@@ -84,7 +84,7 @@ class HomeViewController: UICollectionViewController {
         collectionView.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: CardCollectionViewCell.identifier)
         collectionView.backgroundColor = UIColor(red: 0.11, green: 0.11, blue: 0.12, alpha: 1.00)
 
-        navigationItem.title = "Hall of Fame"
+        navigationItem.title = Bundle.main.title
 
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always

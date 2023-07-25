@@ -12,5 +12,7 @@ extension String {
         self.replacingOccurrences(of: "<b>", with: "")
             .replacingOccurrences(of: "</b>", with: "")
             .replacingOccurrences(of: "[x]", with: "")
+            .replacingOccurrences(of: "<i>", with: "")
+            .replacingOccurrences(of: "</i>", with: "")
     }
 }

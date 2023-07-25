@@ -6,24 +6,6 @@
 //
 
 import Network
-import UIKit
-
-// final class Network {
-//    public private(set) var isConnected: Bool = false
-//    static func monitorNetwork() {
-//        let monitor = NWPathMonitor()
-//        monitor.pathUpdateHandler = { path in
-//            if path.status == .satisfied {
-//                print("INTERNET ON")
-//            } else {
-//                print("INTERNET OFF")
-//            }
-//        }
-//        
-//        let queue = DispatchQueue(label: "Network")
-//        monitor.start(queue: queue)
-//    }
-// }
 
 final class NetworkMonitor {
     static let shared = NetworkMonitor()

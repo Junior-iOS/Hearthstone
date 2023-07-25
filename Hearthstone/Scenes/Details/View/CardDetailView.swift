@@ -134,7 +134,7 @@ final class CardDetailView: UIView {
     // MARK: - Methods
     private func setup() {
         addSubviews(cardImage, detailBackgroundView)
-        detailBackgroundView.addSubviews(vStack)
+        detailBackgroundView.addSubview(vStack)
 
         NSLayoutConstraint.activate([
             cardImage.topAnchor.constraint(equalTo: topAnchor, constant: .kConstantFive),
