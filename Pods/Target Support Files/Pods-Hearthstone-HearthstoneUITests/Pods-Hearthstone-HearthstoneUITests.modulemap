@@ -1,6 +1,0 @@
-framework module Pods_Hearthstone_HearthstoneUITests {
-  umbrella header "Pods-Hearthstone-HearthstoneUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
