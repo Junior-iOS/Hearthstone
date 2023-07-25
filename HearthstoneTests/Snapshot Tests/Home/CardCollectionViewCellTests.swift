@@ -15,17 +15,17 @@ final class CardCollectionViewCellTests: QuickSpec {
 
     override func spec() {
         var sut: CardCollectionViewCell!
-        let card = Card(img: "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/5f540fb42f80b768a5a6c2bf8ef9ac6e702515b886508b1b7e3040120f741183.png",
-                        name: "Captain's Parrot",
-                        flavor: "Pirates and Parrots go together like Virmen and Carrots.",
-                        text: "<b>Battlecry:</b> Draw a Pirate from your deck.",
+        let card = Card(img: "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/01f440d011b2c6c84ad6e902fc135977d638e60cac8c6f2993a62c69ab2bbe14.png",
+                        name: "Genn Greymane",
+                        flavor: "Ever since Sylvanas killed his son, he\'s dreamed of getting… even.",
+                        text: "[x]<b>Start of Game:</b>\nIf your deck has only even-\nCost cards, your starting\nHero Power costs (1).",
                         cardSet: "Hall of Fame",
                         type: "Minion",
-                        faction: "",
-                        rarity: "",
-                        attack: 1,
-                        cost: 2,
-                        health: 1)
+                        faction: nil,
+                        rarity: "Legendary",
+                        attack: 6,
+                        cost: 6,
+                        health: 5)
 
         describe("Opening the application") {
             context("on success") {

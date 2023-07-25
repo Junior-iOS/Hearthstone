@@ -61,17 +61,15 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
     func fetchCards() {
         service.execute(.fetchCards(), expecting: Home.Response.self) { [weak self] result in
             guard let self else { return }
-
-//            DispatchQueue.main.async {
-                switch result {
-                case .success(let cards):
-                    self.cards = cards.hallOfFame
-                    self.presenter?.hideSpinner()
-
-                case .failure(let error):
-                    self.presenter?.presentError(error)
-                }
-//            }
+            
+            switch result {
+            case .success(let cards):
+                self.cards = cards.hallOfFame
+                self.presenter?.hideSpinner()
+                
+            case .failure(let error):
+                presenter?.presentError(error)
+            }
         }
     }
 

@@ -17,7 +17,7 @@ enum NetworkError: Error, CustomNSError {
     var localizedDescription: String {
         switch self {
         case .apiError:
-            return "Failed to fetch data"
+            return "The API is unreachable, please contact the API provider"
         case .invalidEndpoint:
             return "invalid Endpoint"
         case .invalidResponse:

@@ -177,7 +177,9 @@ extension HomeViewController: HomeDisplayLogic {
     }
 
     func displayError(_ error: NetworkError) {
-        showAlert(message: error.localizedDescription)
+        showAlert(message: error.localizedDescription) {
+            self.interactor?.fetchCards()
+        }
     }
 
     func displayAlert() {

@@ -16,6 +16,8 @@
 		143C78F52A6F5A62007E7AB1 /* CardListSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C78F42A6F5A62007E7AB1 /* CardListSnapshotTests.swift */; };
 		143C78F72A6F5BE7007E7AB1 /* CardCollectionViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C78F62A6F5BE7007E7AB1 /* CardCollectionViewCellTests.swift */; };
 		143C78F92A6F5E47007E7AB1 /* CardDetailsSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C78F82A6F5E47007E7AB1 /* CardDetailsSnapshotTests.swift */; };
+		143C78FE2A6F67C7007E7AB1 /* MockHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C78FD2A6F67C7007E7AB1 /* MockHomePresenter.swift */; };
+		143C79002A6F6804007E7AB1 /* MockNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C78FF2A6F6804007E7AB1 /* MockNetworkProvider.swift */; };
 		1483958E2A664F20007B3704 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483958D2A664F20007B3704 /* AppDelegate.swift */; };
 		148395902A664F20007B3704 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483958F2A664F20007B3704 /* SceneDelegate.swift */; };
 		148395972A664F24007B3704 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148395962A664F24007B3704 /* Assets.xcassets */; };
@@ -71,6 +73,8 @@
 		143C78F42A6F5A62007E7AB1 /* CardListSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListSnapshotTests.swift; sourceTree = "<group>"; };
 		143C78F62A6F5BE7007E7AB1 /* CardCollectionViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCellTests.swift; sourceTree = "<group>"; };
 		143C78F82A6F5E47007E7AB1 /* CardDetailsSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsSnapshotTests.swift; sourceTree = "<group>"; };
+		143C78FD2A6F67C7007E7AB1 /* MockHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomePresenter.swift; sourceTree = "<group>"; };
+		143C78FF2A6F6804007E7AB1 /* MockNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkProvider.swift; sourceTree = "<group>"; };
 		1483958A2A664F20007B3704 /* Hearthstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hearthstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1483958D2A664F20007B3704 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1483958F2A664F20007B3704 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +182,15 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		143C78FC2A6F67A5007E7AB1 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				143C78FD2A6F67C7007E7AB1 /* MockHomePresenter.swift */,
+				143C78FF2A6F6804007E7AB1 /* MockNetworkProvider.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		148395812A664F20007B3704 = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +229,7 @@
 		148395A32A664F24007B3704 /* HearthstoneTests */ = {
 			isa = PBXGroup;
 			children = (
+				143C78FC2A6F67A5007E7AB1 /* Mock */,
 				143C78F02A6F3F2F007E7AB1 /* Unit Tests */,
 				143C78F32A6F595D007E7AB1 /* Snapshot Tests */,
 			);
@@ -631,8 +645,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				143C78F72A6F5BE7007E7AB1 /* CardCollectionViewCellTests.swift in Sources */,
+				143C78FE2A6F67C7007E7AB1 /* MockHomePresenter.swift in Sources */,
 				143C78F52A6F5A62007E7AB1 /* CardListSnapshotTests.swift in Sources */,
 				143C78F22A6F3F54007E7AB1 /* CardDetailsInteractorTests.swift in Sources */,
+				143C79002A6F6804007E7AB1 /* MockNetworkProvider.swift in Sources */,
 				148395A52A664F24007B3704 /* HomeInteractorTests.swift in Sources */,
 				143C78F92A6F5E47007E7AB1 /* CardDetailsSnapshotTests.swift in Sources */,
 			);

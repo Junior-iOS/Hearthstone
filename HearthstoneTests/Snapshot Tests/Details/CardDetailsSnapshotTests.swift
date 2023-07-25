@@ -16,7 +16,7 @@ final class CardDetailsSnapshotTests: QuickSpec {
     override func spec() {
         var sut: CardDetailsViewController!
 
-        describe("Opening the application") {
+        describe("Opening details screen") {
             context("on success") {
                 it("loads the screen") {
 //                    self.recording = true
